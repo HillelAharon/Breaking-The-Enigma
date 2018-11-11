@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../../common/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" language="javascript"></script>
+    <script src="./UboatBattlefield.js"></script>
+    <link rel="stylesheet" href="./UboatBattlefield.css">
+    <meta charset="UTF-8">
+    <title>Enigma</title>
+</head>
+<body onkeypress="nextString(event)">
+    <div class="mainContainer">
+        <div class="deskContainer">
+            <div class="machineBack"></div>
+            <div class="movingPart" id="head">
+            <div class="typeWriteHead"></div>
+            <div class="page" id="page">
+                <div id="pageText"></div>
+            </div>
+            </div>
+            <div class="typewriterMachine"></div>
+
+            <input type="button" onclick="printAllCandidate()">
+        </div>
+        <div id = "massageStreamContainer"></div>
+        <div id = "readyButtonContainer"></div>
+        <div id = "logoutButtonContainer"></div>
+
+
+        <div id = "alliesContainer" class="alliesContainer"></div>
+    </div>
+    <div class="msgContainer" id="msgContainer">
+        <div class="textBubble" id="textBubble">
+            <div class="nextMsg" id="nextMsg"></div>
+            <p class="speechText" id="speechText">
+            </p>
+        </div>
+        <div class="hitlerHead"></div>
+    </div>
+    <div id = "endGameContainer" class="endGameContainer">
+        <input type="button" onclick="continueFunc()" value="Continue"/>
+        <input id = "logout-button" type="button" onclick="Logout()" value="Logout"/>
+    </div>
+    <div id = "next-round-button" type="button" onclick="goToNextRound()" class="nextRoundButton"><br><br>Next<br>Round</div>
+</body>
+</html>

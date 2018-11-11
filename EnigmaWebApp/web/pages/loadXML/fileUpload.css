@@ -1,0 +1,642 @@
+body{
+    background-color: black;
+}
+@font-face {
+    font-family: pixelFont;
+    src: url("../../fonts/PixelSplitter-Bold.ttf");
+}
+.submarine{
+    position: absolute;
+    background-image: url("../../images/backgrounds/submarine.png");
+    background-size: 100% 100%;
+    height: 100%;
+    width: 100%;
+}
+.coverClose {
+    position: absolute;
+    display: block;
+    background-image: url("../../images/buttons/flapClose.png");
+    background-size: 100% 100%;
+    height: 50%;
+    width: 39%;
+    border: 0px rgba(255, 0, 0, 0) !important;
+    top: 23%;
+    left: 42%;
+    animation: close 1s;
+}
+.coverOpen{
+    position: absolute;
+    display: block;
+    background-image: url("../../images/buttons/flapOpen.png");
+    background-size: 100% 100%;
+    height: 25%;
+    width: 39%;
+    border: 0px rgba(255, 0, 0, 0) !important;
+    top: -1%;
+    left: 42%;
+    animation: open 1s;
+}
+/**********************************************************************/
+/*                    main container machine window                   */
+/**********************************************************************/
+.openMachineContainer{
+    position: absolute;
+    background-size: 100% 100%;
+    height: 100%;
+    width: 100%;
+    background-image: url("../../images/backgrounds/openMachineFinal.png");
+    background-repeat: no-repeat;
+    display: none;
+}
+.openMachineContainer div input form{
+    height: 0;
+    position: absolute;
+}
+/**********************************************************************/
+/*                    main container notches window                   */
+/**********************************************************************/
+.closeMachineContainer {
+    position: absolute;
+    display: block;
+    background: url("../../images/backgrounds/closeMachineFinal.png") 0 0 /100% 100%  no-repeat ;
+    height: 100%;
+    width: 100%;
+    transform-origin:center center;
+    margin:0 auto;
+}
+.clickedOpenMachine{
+    position: absolute;
+
+    width: 4.0%;
+    padding-bottom: 6.5%;
+    top: 26%;
+    right: 61.2%;
+    background: rgba(0, 0, 0, 0) url("../../images/buttons/unClickButton.png") no-repeat;
+    border: 0px;
+}
+/**********************************************************************/
+/*               upload Machine Container style                       */
+/**********************************************************************/
+.rightButton{
+    position: absolute;
+    width: 0%;
+    padding-bottom: 1.5%;
+    top: 26%;
+    right: 62%;
+    background: rgba(0, 0, 0, 0) url("../../images/buttons/unClickButton.png") no-repeat;
+    background-size: 100% 100%;
+    padding-top: 1%;
+    border: 0px;
+    padding-left: 2%;
+}
+.rightButton:active{
+    border: 0px;
+    background-image: url("../../images/buttons/clickedButton.png");
+}
+.leftButton{
+    position: absolute;
+    width: 0%;
+    padding-bottom: 1.5%;
+    background: rgba(0, 0, 0, 0) url("../../images/buttons/unClickButton.png") no-repeat;
+    background-size: 100% 100%;
+    padding-top: 1%;
+    border: 0px;
+    padding-left: 2%;
+    top: 26%;
+    right: 73.2%;
+}
+.leftButton:active{
+    border: 0px;
+    background-image: url("../../images/buttons/clickedButton.png");
+}
+.inputMsg{
+    position: absolute;
+    top: 46.5%;
+    left: 21%;
+    width: 20%;
+    border: 1px;
+    font-size: 2em;
+    background-color: rgba(0,0,0,0) !important;
+    margin-right: 0px;
+    color: wheat;
+    text-align: center;
+    font-family: monospace;
+}
+.clickedChoose:active{
+    background-image: url("../../images/buttons/clickedButton.png");
+}
+/**********************************************************************/
+/*                              Rotors style                          */
+/**********************************************************************/
+.unselectedRotorsContainer{
+    width: 28%;
+    padding-bottom: 5.5%;
+    top: 29%;
+    right:26.5%;
+    position: absolute;
+}
+.rightRotorButton {
+    position: absolute;
+    width: 9%;
+    padding-bottom: 5.5%;
+    top: 10%;
+    right: 1%;
+    border: 0px;
+    background: rgba(0, 0, 0, 0) url("../../images/buttons/rightButton.png") no-repeat;
+}
+.leftRotorButton{
+    position: absolute;
+    width: 10%;
+    padding-bottom: 5.5%;
+    top: 10%;
+    right: 90.5%;
+    border: 0px;
+    background: rgba(0, 0, 0, 0) url("../../images/buttons/leftButton.png") no-repeat;
+}
+.rotor {
+    position: absolute;
+    width: 21.5%;
+    height: 100%;
+    padding-bottom: 3%;
+    padding-right: 6%;
+    top: 8%;
+    right: 40%;
+    background: rgba(0, 0, 0, 0) url("../../images/buttons/NEWROTOR.png") no-repeat;
+    border: 0px;
+    background-size: 100%;
+    font-size: 2em;
+    color: rgba(255, 255, 255, 0.68);
+    text-shadow: white 1px 1px 3px;
+    animation: right 1s;
+}
+.selectedRotor{
+    width: 100%;
+    height: 101%;
+    padding-bottom: 5.5%;
+    padding-left: 5%;
+    /* top: 21%; */
+    /* right: 50%; */
+    background: rgba(0, 0, 0, 0) url("../../images/buttons/SELECTEDROTOR.png") no-repeat;
+    border: 0px;
+    background-size: 100% 100%;
+    font-size: 2em;
+    color: rgba(255, 255, 255, 1);
+    text-shadow: white 1px 1px 3px;
+    animation: selectRotor 1s;
+}
+.selectedRotorsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 27%;
+    padding-bottom: 0%;
+    height: 11%;
+    top: 58%;
+    /* border: black 17px; */
+    right: 21.77%;
+    position: absolute;
+    /* background-color: red; */
+}
+/**********************************************************************/
+/*                           Reflectors style                         */
+/**********************************************************************/
+.unselectedReflectorsContainer{
+    width: 28%;
+    padding-bottom: 4.5%;
+    top: 43%;
+    right: 27%;
+    position: absolute;
+}
+.leftReflectorButton{
+    position: absolute;
+    width: 10%;
+    padding-bottom: 5.5%;
+    top: 10%;
+    right: 90.5%;
+    border: 0px;
+    background: rgba(0, 0, 0, 0) url("../../images/buttons/leftButton.png") no-repeat;
+    border-color: rgba(0,0,0,0);
+
+}
+.rightReflectorButton{
+
+    /*   animation: fade 3.5s; */
+    position: absolute;
+    width: 10%;
+    padding-bottom: 5.5%;
+    top: 12%;
+    right: 0%;
+    background: rgba(0, 0, 0, 0) url("../../images/buttons/rightButton.png") no-repeat;
+    border-color: rgba(0,0,0,0);
+}
+.reflector{
+    position: absolute;
+    width: 18%;
+    height: 108%;
+    padding-bottom: 4.5%;
+    padding-left: 0%;
+    top: 14%;
+    right: 43%;
+    background: rgba(0, 0, 0, 0) url("../../images/buttons/NEWREFLECTOR.png") no-repeat;
+    border: 0px;
+    background-size: 100% 100%;
+    font-size: 2em;
+    font-weight: BOLD;
+    font-variant-caps: all-petite-caps;
+    font-family: monospace;
+    color: rgb(255, 255, 255);
+    text-shadow: white 1px 1px 2px;
+    animation: right 1s;
+}
+.rotorsLeft{
+    position: absolute;
+    display: block;
+    width: 9%;
+    font-size: 3em;
+    font-weight: bold;
+    font-family: monospace;
+    right: 4%;
+    top: 32%;
+    margin: 0px;
+    height: 52%;
+    text-shadow: #0000007a 3px 3px;
+    opacity: 0.5;
+    color: white;
+}
+.selectedReflector{
+    position: absolute;
+    width: 81%;
+    height: 120%;
+    padding-bottom: 4.5%;
+    padding-right: 30%;
+    top: -4%;
+    right: 4%;
+    background: rgba(0, 0, 0, 0) url("../../images/buttons/SELECTEDREFLECTOR.png") no-repeat;
+    border: 0px;
+    background-size: 100% 100%;
+    font-size: 2em;
+    font-weight: BOLD;
+    font-variant-caps: all-petite-caps;
+    color: rgb(224, 206, 50);
+    font-family: monospace;
+    text-shadow: #1f1212 1px 1px 2px;
+    animation: selectReflector 1s;
+}
+.selectedReflectorsContainer{
+    width: 5%;
+    padding-bottom: 4.5%;
+    top: 58%;
+    left: 45.5%;
+    position: absolute;
+    /* background-color: red; */
+}
+/**********************************************************************/
+/*                           Notches style                            */
+/**********************************************************************/
+.abcContainer  {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 36%;
+    height: 37%;
+    grid-gap: 5% 0%;
+    position: absolute;
+    left: 45%;
+    top: 29%;
+    border: 10px blue;
+    animation: fade 1.5s;
+}
+.abcItem {
+    display: grid;
+    grid-gap: -7%;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    padding: -2%;
+    background-size: 76% 98%;
+    background-image: url("../../images/buttons/notch.png");
+    background-repeat: no-repeat;
+}
+.notchDown {
+    position: relative;
+    top: -10%;
+    width: 50%;
+    height: 43%;
+    left: 4%;
+    background-color: #251d1d00;
+    color: #ffe81e;
+    font-weight: bold;
+    text-shadow: #000000 2px 2px 0px;
+    font-size: 14px;
+    border: 0px;
+    padding-bottom: 0px;
+}
+.notchUp {
+    position: relative;
+    width: 31%;
+    height: 68%;
+    top: 15%;
+    left: 13%;
+    background-color: #ff00000a;
+    color: #FFEB3B;
+    font-weight: bold;
+    text-shadow: #000000 2px 2px 1px;
+    font-size: 14px;
+    border: 0px;
+}
+.SelectedAbc {
+    top: -7%;
+    left: 19%;
+    position: relative;
+    padding-bottom: -7%;
+    padding-top: -16%;
+    width: 22%;
+    height: 66%;
+    background-color: rgba(0, 128, 0, 0);
+    font-size: 31px;
+    text-align: justify;
+    text-align-last: left;
+    color: #505050;
+    font-family: monospace;
+    padding-left: 4%;
+    padding-top: 4%;
+    font-weight: bold;
+    font-variant-caps: all-petite-caps;
+    text-shadow: #ffe81c 2px 2px 1px;
+}
+
+/**********************************************************************/
+/*                        Text Bubble style                           */
+/**********************************************************************/
+
+.msgContainer{
+    position: absolute;
+    left: 8%;
+    top: 74%;
+    width: 27%;
+    height: 12%;
+}
+.hitlerHead{
+    background-image: url("../../images/speechBuubles/hitler.png");
+    position: absolute;
+    right: 78%;
+    top: -22%;
+    width: 37%;
+    height: 135%;
+    background-size: 100% 100%;
+}
+.textBubble{
+    background-image: url("../../images/speechBuubles/textBox.png");
+    position: absolute;
+    right: -14%;
+    top: 4%;
+    width: 100%;
+    background-size: 101% 108%;
+    height: 85%;
+}
+.speechText{
+    position: absolute;
+    width: 23ch;
+    font-size: 1.05em;
+    height: 61%;
+    right: -1.5%;
+    opacity: 0.8;
+    padding: 1%;
+    top: -1%;
+    /* background-color: red; */
+    font-family: pixelFont;
+    overflow: hidden;
+}
+.submitText{
+    position: absolute;
+    top: 55%;
+    background-color: rgba(0,0,0,0);
+    right: 20%;
+    border: solid 0px;
+    height: 9%;
+    width: 17%;
+}
+.inputText{
+    position: absolute;
+    top: 65%;
+    left: 65%;
+    text-align: center;
+    font-family: fantasy;
+    height: 6%;
+    width: 27%;
+    background-color: rgba(255, 255, 255, 0) !important;
+    border: 0px solid;
+    font-size: 2em;
+    text-shadow: black 1px -1px 0px;
+    color: darkgrey;
+}
+.nextMsg {
+    display: none;
+    background-image: url("../../images/speechBuubles/nextText.gif");
+    position: absolute;
+    right: 4%;
+    top: 79%;
+    height: 11%;
+    opacity: 0.8;
+    width: 3%;
+    background-size: 100% 100%;
+    float: right;
+}
+.testSpeaking{
+    background-color: red;
+    position: absolute;
+    top:-40%;
+    left:10%;
+}
+
+/**********************************************************************/
+/*                           animations                               */
+/**********************************************************************/
+
+@keyframes selectRotor {
+    0% {
+        position: absolute;
+        width: 22%;
+        height: 107%;
+        padding-bottom: 0.5%;
+        padding-left: 5%;
+        bottom: 255%;
+        right: 60%;
+        background: rgba(0, 0, 0, 0) url("../../images/buttons/NEWROTOR.png") no-repeat;
+        border: 0px;
+        background-size: 100% 100%;
+        font-size: 2em;
+        color: rgb(249, 249, 249);
+        font-family: monospace;
+        text-shadow: #1f1212 1px 1px 2px;
+    }
+    60% {
+        position: absolute;
+        width: 22%;
+        height: 100%;
+        padding-bottom: 5.5%;
+        padding-left: 5%;
+        bottom: 105%;
+        right: 50%;
+        background: rgba(0, 0, 0, 0) url("../../images/buttons/TWISTROTOR.png") no-repeat;
+        border: 0px;
+        background-size: 100% 100%;
+        font-size: 2em;
+        color: rgb(249, 249, 249);
+        font-family: monospace;
+        text-shadow: #1f1212 1px 1px 2px;
+    }
+}
+@keyframes selectReflector {
+    0% {
+        position: absolute;
+        /* width: 79%; */
+        width: 87%;
+        height: 114%;
+        /* height: 111%; */
+        padding-bottom: 4.5%;
+        padding-left: 5%;
+        /* top: 22%; */
+        /* right: 49%; */
+        top: -149%;
+        left: 191%;
+        background: rgba(0, 0, 0, 0) url("../../images/buttons/NEWREFLECTOR.png") no-repeat;
+        border: 0px;
+        background-size: 100% 100%;
+        font-size: 2em;
+        font-weight: BOLD;
+        font-variant-caps: all-petite-caps;
+        color: rgb(249, 249, 249);
+        font-family: monospace;
+        text-shadow: #1f1212 1px 1px 2px;
+    }
+
+    50% {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 13.5%;
+        padding-left: 5%;
+        /* top: 32%; */
+        right: 29%;
+        bottom: 71%;
+        right: -45%;
+        background: rgba(0, 0, 0, 0) url("../../images/buttons/TWISTREFLECTOR.png") no-repeat;
+        border: 0px;
+        background-size: 100% 100%;
+        font-size: 2em;
+        font-weight: BOLD;
+        font-variant-caps: all-petite-caps;
+        color: rgb(249, 249, 249);
+        font-family: monospace;
+        text-shadow: #1f1212 1px 1px 2px;
+    }
+}
+@keyframes fade {
+    0% {opacity:0.0; }
+    66% {  opacity: 0.0;  }
+    100%{  opacity: 1.0  ;  }
+}
+@keyframes out {
+    from {opacity: 0.5; top: 100%;}
+    to {opacity: 1.0;top: 0%;}
+}
+@keyframes right{
+    from {right: 90%; opacity: 0.0}
+    to{right: 60%; opacity: 1.0}
+}
+@keyframes left{
+    0% {left: 100%; opacity: 0.0}
+    20%{opacity: 0.3}
+    40%{left: 50%; opacity: 1.0}
+}
+@keyframes open {
+    0% {
+        position: absolute;
+        background-image: url("../../images/buttons/flapClose.png");
+        background-size: 100% 100%;
+        height: 50%;
+        width: 39%;
+        border: 0px;
+        top: 23%;
+        left: 42%;
+        opacity: 0.9;
+    }
+    25% {
+        position: absolute;
+        background-image: url("../../images/buttons/close3.png");
+        background-size: 100% 100%;
+        height: 42%;
+        width: 47%;
+        top: 16%;
+        border: 0px;
+        left: 34%;
+        /* opacity: 0.9; */
+    }
+    50% {
+        position: absolute;
+        /* display: none; */
+        background-image: url("../../images/buttons/close2.png");
+        background-size: 100% 100%;
+        height: 23%;
+        top: 14%;
+        border: 0px;
+        left: 33%;
+        width: 47%;
+    }
+    75% {
+        position: absolute;
+        background-image: url("../../images/buttons/close1.png");
+        background-size: 100% 100%;
+        height: 24%;
+        left: 32%;
+        top: 1%;
+        border: 0px;
+        width: 48%;
+    }
+}
+@keyframes close {
+    0% {
+        position: absolute;
+        background-image: url("../../images/buttons/flapOpen.png");
+        background-size: 100% 100%;
+        height: 25%;
+        width: 39%;
+        top: -1%;
+        left: 42%;
+        opacity: 0.9;
+    }
+
+    25% {
+        position: absolute;
+        background-image: url("../../images/buttons/close1.png");
+        background-size: 100% 100%;
+        height: 24%;
+        left: 34%;
+        top: 0%;
+        border: 0px;
+        width: 46%;
+    }
+    50% {
+        position: absolute;
+        /* display: none; */
+        background-image: url("../../images/buttons/close2.png");
+        background-size: 100% 100%;
+        height: 23%;
+        top: 16%;
+        border: 0px;
+        left: 31%;
+        width: 50%;
+    }
+    75% {
+        position: absolute;
+        background-image: url("../../images/buttons/close3.png");
+        background-size: 100% 100%;
+        height: 42%;
+        width: 48%;
+        top: 18%;
+        border: 0px;
+        left: 33%;
+
+    }
+}

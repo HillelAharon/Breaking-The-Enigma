@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../../common/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" language="javascript"></script>
+    <script src="./alliesBattlefield.js"></script>
+    <link rel="stylesheet" href="./alliesBattlefield.css">
+    <meta charset="UTF-8">
+    <title>Enigma</title>
+</head>
+<body onkeypress="nextString(event)">
+<div class="mainContainer" onclick="testingTarget(event)">
+    <div class="background-black" id="background"></div>
+    <input type="button" class="typeWriterButton" id="typewriter" onclick="showTypeWriter();"/>
+    <div id = "missionsContainer" class="missionsContainer" >
+        <div class="readyButton" id="readyButton" onclick="ajaxNotifyReady();"></div>
+        <div class="pin" id="pin"></div>
+        <div class="pinCover"></div>
+        <div class="notepadContainer" id="notepadContainer"  onclick="openNotepad()" onmouseover="onHover('Shownotepad')" onmouseleave="onLeave('Shownotepad')">
+            <input type="button" class="openNoteButton" id="Shownotepad"/>
+        </div>
+    </div>
+    <div class="openNoteContainer" id="openNote" onmouseover="onHover('nextPage')" onmouseleave="onLeave('nextPage')">
+        <input type="button" id="nextPage" class="nextPageNoteButton" onclick="nextPageNote()"/>
+        <form id="missionSizeForm" method="GET" action="./alliesBattle">
+            <input type="text" value="Enter Mission size" id="missionSize" class="inputText" name="missionSize" onclick="this.value = ''"/>
+        </form>
+        <div class="missionLeft" id="missionLeft"></div>
+    </div>
+    <div class="nextPageNoteContainer" id="noteNextPage" onmouseover="onHover('backPage')" onmouseleave="onLeave('backPage')">
+        <div id = "agentsContainer" class="agentsContainer">
+        </div>
+        <input type="button" id="backPage" class="nextPageNoteButton" onclick="nextPageNote()"/>
+
+
+    </div>
+</div>
+<div class="msgContainer" id="msgContainer">
+    <div class="textBubble" id="textBubble">
+        <div class="nextMsg" id="nextMsg"></div>
+        <p class="speechText" id="speechText">
+        </p>
+    </div>
+    <div class="hitlerHead"></div>
+</div>
+
+<div id = "alliesContainer" class="alliesContainer">
+</div>
+
+<div id = "endGameContainer"  class="endGameContainer">
+    <input type="button" onclick="goToLobby()" value="Lobby"/>
+    <input type="button" onclick="Logout()" value="Logout"/>
+</div>
+<div id = "readyButtonContainer"></div>
+
+</div>
+
+</body>
+</html>

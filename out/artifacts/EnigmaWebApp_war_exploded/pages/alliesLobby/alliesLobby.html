@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../../common/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" language="javascript"></script>
+    <script src="./alliesLobby.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="./alliesLobby.css" rel="stylesheet" type="text/css">
+</head>
+<body onkeypress="nextString(event)" >
+<div class="mainContainer">
+<div id="battlefieldsContainer">
+    <form id='appliedForm' action='./allieslobby' method='GET'>
+    <input type='submit' value='' style="display: none">
+    </form>
+</div>
+<div id = "readyButtonContainer"></div>
+
+
+</div>
+<div class="msgContainer" id="msgContainer">
+    <div class="textBubble" id="textBubble">
+        <div class="nextMsg" id="nextMsg"></div>
+        <p class="speechText" id="speechText">
+        </p>
+    </div>
+    <!--<div class="churchillHead"></div>-->
+</div>
+
+</body>
+</html>

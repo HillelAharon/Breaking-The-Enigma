@@ -1,0 +1,188 @@
+@font-face {
+    font-family: pixelFont;
+    src: url("../../fonts/PixelSplitter-Bold.ttf");
+}
+
+.mainContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../images/backgrounds/lobby.png");
+    background-size: 100% 100%;
+}
+.battleEntry{
+    position: relative;
+    background-image: url("../../images/buttons/folderBattlefield.png");
+    width: 100%;
+    height: 100%;
+
+    background-size: 100% 100%;
+}
+.battleEntry p {
+    top: 58%;
+    right: 57%;
+    /* background: red; */
+    width: 32%;
+    font-family: monospace;
+    position: absolute;
+    text-align: center;
+    transform: rotate(-8deg);
+    font-size: 1.8em;
+    color: #434550;
+    text-shadow: 1px 1px 1px;
+}
+.battleEntry table{
+    font-family: monospace;
+    width: 34%;
+    height: 11%;
+    position: relative;
+    top: 24.1%;
+    left: 67%;
+    line-height: 170%;
+    text-shadow: #7faed0 1px 1px 1px;
+    font-size: 1.5em;
+}
+
+.SelectBattleEntry {
+    background-image: url("../../images/buttons/folder.png");
+    height: 100%;
+    background-repeat: no-repeat;
+    /* left: 5%; */
+    background-size: 50% 100%;
+    background-position-x: 40%;
+}
+.SelectBattleEntry p {
+
+    top: 38%;
+    left: -5.1%;
+    /* background: red; */
+    width: 32%;
+    font-family: monospace;
+    position: absolute;
+    text-align: center;
+    /* transform: rotate(-8deg); */
+    font-size: 1.2em;
+    color: #434550;
+    text-shadow: #0a44b1 1px 1px 1px;
+}
+
+
+#battlefieldsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 1em;
+    position: absolute;
+    width: 98%;
+    height: 84%;
+}
+.battleDiv{
+    position: relative;
+    width: 18%;
+    height: 50%;
+    background: #cccc;
+    top: 200px;
+    left: 1000px;
+    padding: 10px 20px;
+    border-radius: 7px 5px;
+    border: 2px solid black;
+}
+
+
+td {
+    text-align: center;
+}
+
+
+/**********************************************************************/
+/*                        Text Bubble style                           */
+/**********************************************************************/
+
+.msgContainer{
+    position: absolute;
+    left: 8%;
+    top: 74%;
+    width: 27%;
+    height: 12%;
+}
+.hitlerHead{
+    background-image: url("../../images/speechBuubles/hitler.png");
+    left: -4%;
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    background-size: 100% 100%;
+}
+.textBubble{
+    background-image: url("../../images/speechBuubles/textBox.png");
+    position: absolute;
+    right: -14%;
+    top: 4%;
+    width: 100%;
+    background-size: 101% 108%;
+    height: 85%;
+}
+.speechText {
+    position: absolute;
+    width: 23ch;
+    font-size: 1.05em;
+    height: 61%;
+    right: -1.5%;
+    opacity: 0.8;
+    padding: 1%;
+    top: -5%;
+    font-family: pixelFont;
+    overflow: hidden;
+}
+
+.submitText{
+    position: absolute;
+    top: 55%;
+    background-color: rgba(0,0,0,0);
+    right: 20%;
+    border: solid 0px;
+    height: 9%;
+    width: 17%;
+}
+.inputText{
+    position: absolute;
+    top: 65%;
+    left: 65%;
+    text-align: center;
+    font-family: fantasy;
+    height: 6%;
+    width: 27%;
+    background-color: rgba(255, 255, 255, 0) !important;
+    border: 0px solid;
+    font-size: 2em;
+    text-shadow: black 1px -1px 0px;
+    color: darkgrey;
+
+}
+.nextMsg {
+    display: none;
+    background-image: url("../../images/speechBuubles/nextText.gif");
+    position: absolute;
+    right: 4%;
+    top: 79%;
+    height: 11%;
+    opacity: 0.8;
+    width: 3%;
+    background-size: 100% 100%;
+    float: right;
+}
+.testSpeaking{
+    background-color: red;
+    position: absolute;
+    top:-40%;
+    left:10%;
+}
+.churchilHead {
+    background-image: url("../../images/speechBuubles/cherchill.png");
+    position: absolute;
+    right: 78%;
+    top: -22%;
+    width: 37%;
+    height: 135%;
+    background-size: 100% 100%;
+}

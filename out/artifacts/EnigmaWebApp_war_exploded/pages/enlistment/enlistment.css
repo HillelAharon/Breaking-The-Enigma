@@ -1,0 +1,54 @@
+
+@font-face {
+    font-family: pixelFont;
+    src: url("../../fonts/PixelSplitter-Bold.ttf");
+}
+body {
+    background: #333;
+    padding-top: 5em;
+    display: grid;
+    justify-content: center;
+}
+
+    .main{
+        width:100%;
+        position: relative;
+    }
+    .right{
+
+        display: grid;
+       float: left;
+       width: 50%;
+        opacity: 0.5;
+    }
+    .right-text {
+        position: absolute;
+        left: 66%;
+        font-size: 10px;
+        width: 100%;
+    }
+    .left{
+        display: grid;
+       float: right;
+       width: 50%;
+        opacity: 0.5;
+    }
+
+.left-text{
+    font-size: 10px;
+    position: absolute;
+    top: 25%;
+    left: 0;
+    width: 100%;
+}
+.left-text.active{
+    font-size: 100px;
+}
+    .right:hover{
+        opacity: 1.0;
+    }
+    .left:hover{
+        opacity: 1.0;
+    }
+/* DEMO-SPECIFIC STYLES */
+

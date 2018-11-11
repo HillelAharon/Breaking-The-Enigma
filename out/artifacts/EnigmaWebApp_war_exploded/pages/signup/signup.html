@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Enigma</title>
+    <link rel="stylesheet" href="../../common/bootstrap.min.css">
+    <link rel="stylesheet" href="./singup.css">
+    <script src="../../common/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" language="javascript"></script>
+    <script src="./signup.js"></script>
+    <!-- Link jQuery JavaScript library in order to use the $ (jQuery) method-->
+    <!-- <script src="common/jquery-2.0.3.min.js"></script>-->
+    <!-- and\or any other scripts you might need to operate the JSP file behind the scene once it arrives to the client-->
+</head>
+<body onkeypress="nextString(event)">
+
+<div class="mainContainer">
+    <form id="loginForm" method="POST" action="./login">
+        <input type="text" id="inputText" name="username" class="inputText"/>
+        <input type="submit" value="" class="submitText">
+    </form>
+</div>
+<div class="msgContainer" id="msgContainer">
+    <div class="textBubble" id="textBubble">
+        <div class="nextMsg" id="nextMsg"></div>
+        <p class="speechText" id="speechText">
+        </p>
+    </div>
+</div>
+</body>
+</html>
+

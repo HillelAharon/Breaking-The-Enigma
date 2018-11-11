@@ -1,0 +1,144 @@
+body{
+    background: #5bc0de;
+    font-family: fantasy;
+}
+@font-face {
+    font-family: pixelFont;
+    src: url("../../fonts/PixelSplitter-Bold.ttf");
+}
+.mainContainer{
+    background-image: url("../../images/backgrounds/loginScreen.png");
+    /* background-color: #cccccc; */
+    /* background-position: center; */
+    /* background-attachment: fixed; */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    /* background-repeat: no-repeat; */
+    background-size: 100% 100%;
+}
+
+/**********************************************************************/
+/*                        Text Bubble style                           */
+/**********************************************************************/
+.msgContainer{
+    position: absolute;
+    left: 8%;
+    top: 74%;
+    width: 27%;
+    height: 12%;
+}
+.hitlerHead{
+    background-image: url("../../images/speechBuubles/hitler.png");
+    position: absolute;
+    right: 78%;
+    top: -22%;
+    width: 37%;
+    height: 135%;
+    background-size: 100% 100%;
+}
+.textBubble{
+    background-image: url("../../images/speechBuubles/textBox.png");
+    position: absolute;
+    right: -14%;
+    top: 4%;
+    width: 100%;
+    background-size: 101% 108%;
+    height: 85%;
+}
+.speechText{
+    position: absolute;
+    width: 23ch;
+    top: -3%;
+    font-size: 1.05em;
+    height: 61%;
+    right: 10.5%;
+    opacity: 0.8;
+    padding: 1%;
+    top: 20%;
+    /* background-color: red; */
+    font-family: pixelFont;
+    overflow: hidden;
+}
+.submitText{
+    position: absolute;
+    top: 55%;
+    background-color: rgba(0,0,0,0);
+    right: 20%;
+    border: solid 0px;
+    height: 9%;
+    width: 17%;
+}
+.inputText{
+    position: absolute;
+    top: 65%;
+    left: 65%;
+    text-align: center;
+    font-family: fantasy;
+    height: 6%;
+    width: 27%;
+    background-color: rgba(255, 255, 255, 0) !important;
+    border: 0px solid;
+    font-size: 2em;
+    text-shadow: black 1px -1px 0px;
+    color: darkgrey;
+
+}
+.nextMsg {
+    display: none;
+    background-image: url("../../images/speechBuubles/nextText.gif");
+    position: absolute;
+    right: 4%;
+    top: 79%;
+    height: 11%;
+    opacity: 0.8;
+    width: 3%;
+    background-size: 100% 100%;
+    float: right;
+}
+.testSpeaking{
+    background-color: red;
+    position: absolute;
+    top:-40%;
+    left:10%;
+}
+.churchilHead {
+    background-image: url("../../images/speechBuubles/cherchill.png");
+    position: absolute;
+    right: 78%;
+    top: -22%;
+    width: 37%;
+    height: 135%;
+    background-size: 100% 100%;
+}
+/*.churchilHead{*/
+    /*background-image: url("../../images/speechBuubles/cherchill.png");*/
+    /*position: absolute;*/
+    /*right: 81%;*/
+    /*top: 17%;*/
+    /*width: 17%;*/
+    /*height: 80%;*/
+    /*background-size: 100% 100%;*/
+/*}*/
+/*///////////////////////////////////////////*/
+@keyframes bounce {
+    from { margin-top: 20px; }
+    to { margin-top: 23px; }
+}
+
+.speechText1{
+    position: absolute;
+    width: 23ch;
+    top: 26%;
+    font-size: 1.2em;
+    height: 61%;
+    right: 4.5%;
+    opacity: 0.8;
+    /* background-color: red; */
+    font-family: pixelFont;
+    overflow: hidden;
+}
+
+
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }

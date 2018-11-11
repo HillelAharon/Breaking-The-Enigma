@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script src="../../common/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" language="javascript"></script>
+    <link rel="stylesheet" href="./fileUpload.css">
+    <script src="./fileUpload.js"></script>
+    <title>Enigma</title>
+
+</head>
+<body onkeypress="nextString(event)">
+<div class="submarine" id="submarine">
+
+
+    <!--********************************************************************-->
+    <!--                   main container machine                           -->
+    <!--********************************************************************-->
+    <div id="openMachineContainer" class="openMachineContainer">
+
+        <input type="button" value="" id="clickedCloseMachine" class="rightButton" onclick="setMachineCover(false)" />
+        <!--******************************************************************-->
+        <!--               upload Machine Container form                      -->
+        <!--******************************************************************-->
+        <form id="uploadForm" class="uploadForm" action="./uploadAndSetting" enctype="multipart/form-data" method="POST">
+            <input type="button" id="clickedChoose" class="leftButton" onclick="document.getElementById('file').click()"/>
+            <input type="file" name="file1" value=""  id="file" style="display: none;"/>
+            <!--<input  type="submit" value="" id="clickedUpload"/>-->
+        </form>
+        <!--******************************************************************-->
+        <!--                          Rotors container                        -->
+        <!--******************************************************************-->
+        <div id="unselectedRotorsContainer" class="unselectedRotorsContainer">
+            <input type="button" value=""  id="leftRotor" class="leftRotorButton"  onclick="rotorsCarousel(-1);"/>
+            <input type="button" value="" id="rightRotor" class="rightRotorButton"  onclick="rotorsCarousel(1);"/>
+        </div>
+
+        <!--******************************************************************-->
+        <!--                       Reflectors container                       -->
+        <!--******************************************************************-->
+        <div id="unselectedReflectorsContainer" class="unselectedReflectorsContainer">
+            <input type="button" value="" id="leftReflector" class="leftReflectorButton" onclick="reflectorCarousel(-1)"/>
+            <input type="button" value="" id="rightReflector" class="rightReflectorButton"  onclick="reflectorCarousel(1)"/>
+        </div>
+
+
+
+
+        <!--******************************************************************-->
+        <!--                       Selected Items containers                  -->
+        <!--******************************************************************-->
+        <div id="selectedRotorsContainer" class="selectedRotorsContainer">
+            <p class="rotorsLeft" id="rotorsLeft"></p>
+        </div>
+        <div id="selectedReflectorsContainer" class="selectedReflectorsContainer"></div>
+
+
+    </div>
+
+
+    <!--******************************************************************-->
+    <!--                    main container notches                        -->
+    <!--******************************************************************-->
+    <div id="closeMachineContainer" class="closeMachineContainer">
+
+        <input type="button" value="" id="clickedOpenMachine" class="rightButton" onclick="setMachineCover(true)"/>
+        <form id="submitMachine" class="uploadForm" action="./uploadAndSetting" method="POST">
+            <input type="text" class="inputMsg" id="msg"/>
+            <input type="submit" value="" id="submitSecretButton" class="leftButton"/>
+        </form>
+        <div class="coverClose" id="machineCover"></div>
+
+        <!--******************************************************************-->
+        <!--                       Notches Containers                         -->
+        <!--******************************************************************-->
+        <div id="abcContainer" class="abcContainer"></div>
+    </div>
+    <!--******************************************************************-->
+    <!--                    MSG speech Bubble containers                  -->
+    <!--******************************************************************-->
+    </div>
+<div class="msgContainer" id="msgContainer">
+    <div class="textBubble" id="textBubble">
+        <div class="nextMsg" id="nextMsg"></div>
+        <p class="speechText" id="speechText">
+        </p>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
